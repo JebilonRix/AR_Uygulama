@@ -37,11 +37,13 @@ public class TipHandler : MonoBehaviour
 
     public void ShowTip(string message)
     {
+        //text area'ya string input'umuzu iþledik.
         _textArea.text = message;
     }
 
     public void ShowNothing()
     {
+        //_text area'yý boþalttýk. (boþ string iþledik)
         _textArea.text = "";
     }
 }

@@ -14,7 +14,7 @@ public class TipSignal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //
+        //Tip handle singelton'a ulaþ ve ShowNothing adlý methodu çaðýr. 
         TipHandler.Instance.ShowNothing();
     }
 }
