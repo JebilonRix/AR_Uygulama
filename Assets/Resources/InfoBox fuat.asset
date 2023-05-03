@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f97d48ee380d4634aa473f7cb155183d, type: 3}
-  m_Name: InfoBox
+  m_Name: InfoBox fuat
   m_EditorClassIdentifier: 
   _binaEnvanterNo: 12
-  _binaAdi: Ali
-  _binaTarih: 1996
+  _binaAdi: Fuat
+  _binaTarih: 2000
   _binaAciklama: "G\xFCzel"
   _binaYapimSistemi: 
   _binaRestorasyonTarihi: 
-  _binaAnaResmi: {fileID: 0}
+  _binaAnaResmi: {fileID: 21300000, guid: b758da15f92b67f409fabc3f51fe2203, type: 3}
   _binaResimler: []
   _videoclip: {fileID: 0}

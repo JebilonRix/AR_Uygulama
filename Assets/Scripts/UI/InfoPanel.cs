@@ -1,20 +1,22 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InfoPanel : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private TextMeshProUGUI _adText;
+    [SerializeField] private TextMeshProUGUI _tarihText;
+    [SerializeField] private Image _anaImage;
 
-    private void OnEnable()
+    public void GetInfoFromInfoBox(InfoBox infoBox)
     {
-        Debug.Log("info panel aktif");
+        Debug.Log(infoBox.BinaAdi + " veriler iþlendi");
 
-        if (Manager.Instance.CurrentInfoBox == null)
-        {
-            Debug.Log("info box yok");
-            return;
-        }
+        //yazýsal verileri iþliyorum.
+        _adText.text = infoBox.BinaAdi;
+        _tarihText.text = infoBox.BinaTarih;
 
-        _text.text = Manager.Instance.CurrentInfoBox.BinaAdi + " " + Manager.Instance.CurrentInfoBox.BinaTarih;
+        //görsel verileri iþliyorum.
+        _anaImage.sprite = infoBox.BinaAnaResmi;
     }
 }
