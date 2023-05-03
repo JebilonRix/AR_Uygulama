@@ -17,6 +17,13 @@ public class InfoBox : ScriptableObject
     [SerializeField] private Sprite[] _binaResimler;
     [SerializeField] private VideoClip _videoclip;
 
+    public int BinaEnvanterNo { get => _binaEnvanterNo; }
     public string BinaAdi { get => _binaAdi; }
     public string BinaTarih { get => _binaTarih; }
+    public string BinaAciklama { get => _binaAciklama; }
+    public string BinaYapimSistemi { get => _binaYapimSistemi; }
+    public string BinaRestorasyonTarihi { get => _binaRestorasyonTarihi; }
+    public Sprite BinaAnaResmi { get => _binaAnaResmi; }
+    public Sprite[] BinaResimler { get => _binaResimler; }
+    public VideoClip Videoclip { get => _videoclip; }
 }

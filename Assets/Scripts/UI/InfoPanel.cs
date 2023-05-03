@@ -9,12 +9,12 @@ public class InfoPanel : MonoBehaviour
     {
         Debug.Log("info panel aktif");
 
-        if (Manager.Instance.GetInfoBox() == null)
+        if (Manager.Instance.CurrentInfoBox == null)
         {
             Debug.Log("info box yok");
             return;
         }
 
-        _text.text = Manager.Instance.GetInfoBox().BinaAdi + " " + Manager.Instance.GetInfoBox().BinaTarih;
+        _text.text = Manager.Instance.CurrentInfoBox.BinaAdi + " " + Manager.Instance.CurrentInfoBox.BinaTarih;
     }
 }
