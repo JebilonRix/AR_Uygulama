@@ -27,7 +27,7 @@ public class Manager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -83,7 +83,7 @@ public class Manager : MonoBehaviour
         }
         else if (index == 1)
         {
-            Debug.Log("index 1");
+            //Debug.Log("index 1");
 
             SetPanelsActivation(true, false, true, false, true);
 

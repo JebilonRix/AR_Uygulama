@@ -10,7 +10,7 @@ public class InfoPanel : MonoBehaviour
 
     public void GetInfoFromInfoBox(InfoBox infoBox)
     {
-        Debug.Log(infoBox.BinaAdi + " veriler iþlendi");
+        //Debug.Log(infoBox.BinaAdi + " veriler iþlendi");
 
         //yazýsal verileri iþliyorum.
         _adText.text = infoBox.BinaAdi;
