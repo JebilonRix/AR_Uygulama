@@ -15,9 +15,10 @@ MonoBehaviour:
   _binaEnvanterNo: 12
   _binaAdi: Ali
   _binaTarih: 1996
-  _binaAciklama: "G\xFCzel"
-  _binaYapimSistemi: 
-  _binaRestorasyonTarihi: 
-  _binaAnaResmi: {fileID: 21300000, guid: e48209ea07ad27940a506e92694c9370, type: 3}
-  _binaResimler: []
+  _binaRestorasyonTarihi: 2023
+  _binaYapimSistemi: "Y\u0131\u011Fma"
+  _binaAciklama: "g\xFCzel ama \xE7ok g\xFCzel baya\u011F\u0131 g\xFCzel"
+  _binaResimler:
+  - {fileID: 21300000, guid: b758da15f92b67f409fabc3f51fe2203, type: 3}
+  - {fileID: 21300000, guid: 6c526b91e951b64499c933dd7390bdb5, type: 3}
   _videoclip: {fileID: 0}

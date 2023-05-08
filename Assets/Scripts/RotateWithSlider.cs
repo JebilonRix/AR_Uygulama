@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class RotateWithSlider : MonoBehaviour
 {
     [SerializeField] private Slider _horizontalSlider;
-    [SerializeField] private Slider _verticalSlider;
+    //[SerializeField] private Slider _verticalSlider;
 
     private Quaternion _firstRotation;
 
@@ -17,6 +17,7 @@ public class RotateWithSlider : MonoBehaviour
     private void Update()
     {
         // Slider deðerini, ilk dönüklükle çarparak objeyi bir ofset ile döndürüyoruz.
-        transform.rotation = _firstRotation * Quaternion.Euler(0f, _horizontalSlider.value, _verticalSlider.value);
+        //transform.rotation = _firstRotation * Quaternion.Euler(0f, _horizontalSlider.value, _verticalSlider.value);
+        transform.rotation = _firstRotation * Quaternion.Euler(0f, _horizontalSlider.value, 0f);
     }
 }

@@ -1,3 +1,4 @@
+using RedPanda;
 using System.Collections.Generic;
 using UnityEngine;
 using Image = UnityEngine.UI.Image;
@@ -17,7 +18,9 @@ public class Manager : MonoBehaviour
     [SerializeField] private GameObject _cube;
     [SerializeField] private GameObject _cube2;
 
-    private List<GameObject> _buildings = new();
+    private readonly List<GameObject> _buildings = new();
+
+    [SerializeField] private Lines<string, GameObject> _lines;
 
     public static Manager Instance { get; private set; }
     public InfoBox CurrentInfoBox { get; set; }
@@ -83,8 +86,6 @@ public class Manager : MonoBehaviour
         }
         else if (index == 1)
         {
-            //Debug.Log("index 1");
-
             SetPanelsActivation(true, false, true, false, true);
 
             _panel_info.GetComponent<InfoPanel>().GetInfoFromInfoBox(CurrentInfoBox);
@@ -93,6 +94,8 @@ public class Manager : MonoBehaviour
         {
             //2. index'im benim ar panelim. AR panelinde background'a ihtiyaç yok.
             SetPanelsActivation(false, false, false, true, false);
+
+            _panel_ar.GetComponent<ARPanel>().GetInfoFromInfoBox(CurrentInfoBox);
         }
     }
 
