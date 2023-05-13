@@ -4,8 +4,6 @@ using UnityEngine.UI;
 public class RotateWithSlider : MonoBehaviour
 {
     [SerializeField] private Slider _horizontalSlider;
-    //[SerializeField] private Slider _verticalSlider;
-
     private Quaternion _firstRotation;
 
     private void Start()
