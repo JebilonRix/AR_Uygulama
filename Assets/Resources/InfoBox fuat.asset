@@ -15,11 +15,11 @@ MonoBehaviour:
   _binaEnvanterNo: 12
   _binaAdi: Fuat
   _binaTarih: 2000
-  _binaAciklama: "G\xFCzel"
-  _binaYapimSistemi: 
   _binaRestorasyonTarihi: 
-  _binaAnaResmi: {fileID: 21300000, guid: b758da15f92b67f409fabc3f51fe2203, type: 3}
+  _binaYapimSistemi: 
+  _binaAciklama: "G\xFCzel"
   _binaResimler:
   - {fileID: 21300000, guid: a88d1ec3cb27de446a4621a39836f64e, type: 3}
   - {fileID: 21300000, guid: 6c526b91e951b64499c933dd7390bdb5, type: 3}
+  - {fileID: 21300000, guid: a13b4500872aef34d848e2f3a607df9e, type: 3}
   _videoclip: {fileID: 0}

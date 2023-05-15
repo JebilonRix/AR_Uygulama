@@ -13,22 +13,43 @@ public class InfoPanel : MonoBehaviour
 
     public void GetInfoFromInfoBox(InfoBox infoBox)
     {
-        //yazýsal verileri iþliyorum.
+        // Metin verilerini iþle
         SetText(infoBox);
 
-        //kaç tane resim varsa o kadar nesneye bu resimleri atayacaðýz.
-        for (int i = 0; i < infoBox.BinaResimler.Length; i++)
+        // Resim verilerini iþle
+        SetImages(infoBox);
+
+        if (infoBox.Videoclip != null)
+        {
+            // Video iþleme
+            _videoPlayer.clip = infoBox.Videoclip;
+        }
+    }
+
+    private void SetImages(InfoBox infoBox)
+    {
+        int lengthOfImages = infoBox.BinaResimler.Length;
+        int numberOfImageObjects = _images.Count;
+
+        // Öncelikle tüm resim nesnelerini etkinleþtirin çünkü iþleyeceðimiz resim sayýsý, aktif olan resim nesnelerinden fazla olabilir.
+        for (int i = 0; i < numberOfImageObjects; i++)
+        {
+            _images[i].gameObject.SetActive(true);
+        }
+
+        // Her bir resmi, resim nesnelerine atýyoruz.
+        for (int i = 0; i < lengthOfImages; i++)
         {
             _images[i].sprite = infoBox.BinaResimler[i];
         }
 
-        //Ana resim olarak, infobox'a eklenen ilk resmi getir.
+        // Ana resim olarak, InfoBox'a eklenen ilk resmi getiriyor.
         _mainImage.sprite = infoBox.BinaResimler[0];
 
-        if (infoBox.Videoclip != null)
+        // Gerekli olmayan tüm resim nesnelerini devre dýþý býrakýyoruz.
+        for (int i = lengthOfImages; i < numberOfImageObjects; i++)
         {
-            //video iþleme
-            _videoPlayer.clip = infoBox.Videoclip;
+            _images[i].gameObject.SetActive(false);
         }
     }
 
@@ -39,7 +60,7 @@ public class InfoPanel : MonoBehaviour
             $"Yapým Tarihi: {infoBox.BinaTarih}\n" +
             $"Restorasyon Tarihi: {infoBox.BinaRestorasyonTarihi}\n" +
             $"Yapým Sistemi: {infoBox.BinaYapimSistemi}\n" +
-            $"Açýklama: {infoBox.BinaAciklama}\n";
+            $"Açýklama: {infoBox.BinaAciklama}";
 
         _textArea.text = yazi;
     }
