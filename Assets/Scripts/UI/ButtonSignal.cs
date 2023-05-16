@@ -36,5 +36,17 @@ public class ButtonSignal : MonoBehaviour
 
         //Tüm binalarý kapatacak.
         Manager.Instance.ActivateBuilding(-1);
+
+        //AR alanýný kapatýr.
+        Manager.Instance.DeactivateField();
+    }
+
+    public void ShowARField()
+    {
+        //Selection panelini aktive edecek.
+        Manager.Instance.ActivatePanel(3);
+
+        //AR alanýný açar.
+        Manager.Instance.ActivateField();
     }
 }

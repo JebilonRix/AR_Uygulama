@@ -12,6 +12,9 @@ public class Screenshot : MonoBehaviour
         // Arayüzü devre dýþý býrak
         _UI.SetActive(false);
 
+        //Bug'ý önlemek için.
+        StopCoroutine(GoruntuAl());
+
         //IEnumerator çalýþtýr.
         StartCoroutine(GoruntuAl());
     }
@@ -31,7 +34,7 @@ public class Screenshot : MonoBehaviour
         // Ekran görüntüsü adýný belirleyin
         string goruntuAdi = "EkranGoruntusu_AR" + System.DateTime.Now.ToString() + ".png";
 
-        // Texture2D'yi galeriye kaydedin
+        // Texture2D'yi galeriye kaydedin. (Telefon için)
         NativeGallery.SaveImageToGallery(texture, "AR Albümü", goruntuAdi);
 
         // Texture2D'yi bellekten silin

@@ -26,6 +26,18 @@ public class InfoPanel : MonoBehaviour
         }
     }
 
+    private void SetText(InfoBox infoBox)
+    {
+        string yazi =
+            $"Adý: {infoBox.BinaAdi}\n" +
+            $"Yapým Tarihi: {infoBox.BinaTarih}\n" +
+            $"Restorasyon Tarihi: {infoBox.BinaRestorasyonTarihi}\n" +
+            $"Yapým Sistemi: {infoBox.BinaYapimSistemi}\n" +
+            $"Açýklama: {infoBox.BinaAciklama}";
+
+        _textArea.text = yazi;
+    }
+
     private void SetImages(InfoBox infoBox)
     {
         int lengthOfImages = infoBox.BinaResimler.Length;
@@ -51,17 +63,5 @@ public class InfoPanel : MonoBehaviour
         {
             _images[i].gameObject.SetActive(false);
         }
-    }
-
-    private void SetText(InfoBox infoBox)
-    {
-        string yazi =
-            $"Adý: {infoBox.BinaAdi}\n" +
-            $"Yapým Tarihi: {infoBox.BinaTarih}\n" +
-            $"Restorasyon Tarihi: {infoBox.BinaRestorasyonTarihi}\n" +
-            $"Yapým Sistemi: {infoBox.BinaYapimSistemi}\n" +
-            $"Açýklama: {infoBox.BinaAciklama}";
-
-        _textArea.text = yazi;
     }
 }
