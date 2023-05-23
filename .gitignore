@@ -70,3 +70,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Model.meta
+Assets/Model/yuzey.jpg
+Assets/Model/yuzey.jpg.meta
+Assets/Model/yuzey.mtl
+Assets/Model/yuzey.mtl.meta
+Assets/Model/yuzey.obj

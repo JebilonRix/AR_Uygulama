@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AR_Uygulama02.unity
+    guid: efd3fe6bcc782a14ab048e64a41236fb
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5e55e29aa2d983f4e8a3367afed4fe93, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c0c5a60dd480cc940907583668af5e04, type: 2}
