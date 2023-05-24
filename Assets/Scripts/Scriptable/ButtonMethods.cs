@@ -5,16 +5,12 @@ public class ButtonMethods : ScriptableObject
 {
     public void DokunmaBasladi(string binaAdi)
     {
-        Debug.Log("Dokunma baþladý");
-
         //Buttona dokunulduðunda, o binanýn adýný baþlýða yazar.
         ARManager.Instance.SetTitleText(binaAdi);
     }
 
     public void DokunmaBitti()
     {
-        Debug.Log("Dokunma bitti");
-
         //Dokunma bittiðinde baþlýðýn adýný varsayýlana döndürür.
         ARManager.Instance.SetTitleToDefault();
     }
@@ -47,7 +43,7 @@ public class ButtonMethods : ScriptableObject
         manager.SetActiveBuilding("Genel");
     }
 
-    public void BinayiGoster(string binaAdi)
+    public void BinayiGoster()
     {
         ARManager manager = ARManager.Instance;
 
@@ -55,7 +51,7 @@ public class ButtonMethods : ScriptableObject
         manager.SetActiveOnlyOnePanel("AR_Bina");
 
         //AR için taranmýþ binayý aktive ediyor.
-        manager.SetActiveBuilding(binaAdi);
+        manager.SetActiveBuilding(manager.CurrentInfoBox.BinaAdi);
     }
 
     public void BinaDigerHaliGoster()
@@ -66,12 +62,22 @@ public class ButtonMethods : ScriptableObject
 
     public void AnaEkranaDon()
     {
+        ARManager manager = ARManager.Instance;
+
         //Sadece ana ekraný açar. Diðer panelleri kapatýr.
-        ARManager.Instance.SetActiveOnlyOnePanel("Main");
+        manager.SetActiveOnlyOnePanel("Main");
+
+        //Eðer herhangi bir bina veya genel görünüm açýksa o objeyi kapatýr.
+        manager.DeactivateAllBuildings();
     }
 
     public void Cikis()
     {
         Application.Quit();
+    }
+
+    public void Bas()
+    {
+        Debug.Log("bas");
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 public class BuildingsContainer : MonoBehaviour
 {
     [SerializeField] private List<string> _buildingNames = new();
+
+    [TextArea]
+    [SerializeField] private string note = "Öncelikle binanýn eski halini ekleyin daha sonra yeni halini ekleyin. Yani bir eski, bir yeni þeklinde olmalýdýr.";
+    [Space(5)]
     [SerializeField] private List<GameObject> _buildingsObject = new();
     private readonly Dictionary<string, GameObject> _buildingsDictionary = new();
 
@@ -28,41 +32,34 @@ public class BuildingsContainer : MonoBehaviour
         }
 
         //isimler ile objeleri sözlüðe kaydediyor.
-        if (_buildingNames.Count * 2 == _buildingsObject.Count)
+        int j = 0;
+
+        for (int i = 0; i < _buildingsObject.Count; i++)
         {
-            for (int i = 0; i < _buildingNames.Count; i++)
+            string currentName = _buildingNames[j];
+
+            //j bizim sayacýmýzdýr. Eðer sayaç çift ise eski etiketi alacak, tek ise yeni etiketini alacak
+            if (i % 2 != 0)
             {
-                for (int j = 0; j < 2; j++)
-                {
-                    string currentName = _buildingNames[i];
-
-                    //j bizim sayacýmýzdýr. Eðer sayaç çift ise eski etiketi alacak, tek ise yeni etiketini alacak
-                    if (j % 2 != 0)
-                    {
-                        currentName += "_Yeni";
-                    }
-                    else
-                    {
-                        currentName += "_Eski";
-                    }
-
-                    //Trim methodu => Ýsimlerdeki boþluðu siliyor.
-                    _buildingsDictionary.Add(currentName.Trim(), _buildingsObject[i]);
-                }
+                currentName += "_Eski";
+                j++;
             }
-        }
-        else
-        {
-            Debug.Log("Bina isimleri ile bina objelerinin sayýsý ayný deðil.");
+            else
+            {
+                currentName += "_Yeni";
+            }
+
+            //Trim methodu => Ýsimlerdeki boþluðu siliyor.
+            _buildingsDictionary.Add(currentName.Trim(), _buildingsObject[i]);
         }
 
-        CloseAll();
+        CloseAllBuildings();
     }
 
     public GameObject GetObject(string name)
     {
         //tüm bina objeleri kapat
-        CloseAll();
+        CloseAllBuildings();
 
         //bina sözlüðünden istenilen objeyi alacak.
         _buildingsDictionary.TryGetValue(name, out GameObject obj);
@@ -73,7 +70,7 @@ public class BuildingsContainer : MonoBehaviour
         return obj;
     }
 
-    private void CloseAll()
+    public void CloseAllBuildings()
     {
         foreach (GameObject obj in _buildingsObject)
         {

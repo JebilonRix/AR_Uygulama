@@ -49,7 +49,10 @@ public class ARManager : MonoBehaviour
         }
 
         SetTitleToDefault();
+
         SetActiveOnlyOnePanel("Main");
+
+        CurrentInfoBox = _infoBoxContainer.GetInfoBox("EnvanterNo04");
     }
 
     //Buttonlar için
@@ -67,8 +70,16 @@ public class ARManager : MonoBehaviour
     //Buttonlar için
     public void SetActiveBuilding(string buildingName)
     {
-        _buildingNew = _buildingsContainer.GetObject(buildingName + "_Yeni");
-        _buildingOld = _buildingsContainer.GetObject(buildingName + "_Eski");
+        string newName = buildingName + "_Yeni";
+        string oldName = buildingName + "_Eski";
+
+        _buildingNew = _buildingsContainer.GetObject(newName.Trim());
+        _buildingOld = _buildingsContainer.GetObject(oldName.Trim());
+    }
+
+    public void DeactivateAllBuildings()
+    {
+        _buildingsContainer.CloseAllBuildings();
     }
 
     public void SwitchBuilding()
