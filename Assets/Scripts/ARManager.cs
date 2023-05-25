@@ -3,7 +3,7 @@ using UnityEngine;
 public class ARManager : MonoBehaviour
 {
     [SerializeField] private string _defaultTitle = "Kapanca Sokak Kültür Rotasý";
-
+    [SerializeField] private float _angle;
     [SerializeField] private PanelContainer _panelContainer;
     [SerializeField] private BuildingsContainer _buildingsContainer;
     [SerializeField] private InfoBoxContainer _infoBoxContainer;
@@ -18,6 +18,7 @@ public class ARManager : MonoBehaviour
 
     private void Awake()
     {
+        //Singleton pattern.
         if (Instance == null)
         {
             Instance = this;
@@ -27,10 +28,20 @@ public class ARManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        //Tüm slider ile dönecek objeleri buluyor.
+        RotateWithSlider[] rotatebles = FindObjectsOfType<RotateWithSlider>(true);
+
+        //Ýstediðimiz açý aralýðýný tüm objelere uyguluyor.
+        foreach (RotateWithSlider item in rotatebles)
+        {
+            item.Angle = _angle;
+        }
     }
 
     private void Start()
     {
+        //Unutma engelleme
         if (_panelContainer == null)
         {
             _panelContainer = GetComponent<PanelContainer>();
@@ -48,10 +59,13 @@ public class ARManager : MonoBehaviour
             _uiContainer = GetComponent<UIContainer>();
         }
 
-        SetTitleToDefault();
-
+        //Ana paneli açýyor.
         SetActiveOnlyOnePanel("Main");
 
+        //Varsayýlan baþlýðý baþlýða yazýyor.
+        SetTitleToDefault();
+
+        //Bug önlemek: için infobox'a envanter 4'ü uyguluyor.
         CurrentInfoBox = _infoBoxContainer.GetInfoBox("EnvanterNo04");
     }
 
@@ -125,5 +139,10 @@ public class ARManager : MonoBehaviour
     public void SetImages()
     {
         _uiContainer.SetImages(CurrentInfoBox);
+    }
+
+    public void SetBuildingInfoMaterial()
+    {
+        _uiContainer.SetBuildingInfo(CurrentInfoBox);
     }
 }

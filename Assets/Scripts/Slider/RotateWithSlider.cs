@@ -5,6 +5,8 @@ public class RotateWithSlider : MonoBehaviour
 {
     [SerializeField] private PinchSlider _pinchSlider;
 
+    public float Angle { get; set; }
+
     private void Start()
     {
         if (_pinchSlider == null)
@@ -18,7 +20,7 @@ public class RotateWithSlider : MonoBehaviour
         //Objeyi slider'ýn deðerine göre döndürüyoruz.
         transform.rotation = Quaternion.Euler(
             transform.rotation.eulerAngles.x,
-            (_pinchSlider.SliderValue * 360f) - 180f,
+            (_pinchSlider.SliderValue * Angle * 2) - Angle,
             transform.rotation.eulerAngles.z);
     }
 }

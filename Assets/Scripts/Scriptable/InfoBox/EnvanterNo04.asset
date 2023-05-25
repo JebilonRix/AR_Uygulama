@@ -21,4 +21,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 63dc0852889311b469d11489139cab75, type: 2}
   - {fileID: 2100000, guid: 70cdcd9a912095d4abf1e52784ce346e, type: 2}
   - {fileID: 2100000, guid: e90486d7edfd2a54dbb7bacab6a551eb, type: 2}
+  _binaBilgiMaterial: {fileID: 2100000, guid: fcac7403d5b526b4fafe6c11917387ad, type: 2}
   _videoclip: {fileID: 0}

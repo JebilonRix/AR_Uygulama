@@ -20,4 +20,5 @@ MonoBehaviour:
   _binaResimler:
   - {fileID: 2100000, guid: 63dc0852889311b469d11489139cab75, type: 2}
   - {fileID: 2100000, guid: 70cdcd9a912095d4abf1e52784ce346e, type: 2}
+  _binaBilgiMaterial: {fileID: 2100000, guid: a942fa9b4a4dea1409e63ae0f36e5e6e, type: 2}
   _videoclip: {fileID: 0}

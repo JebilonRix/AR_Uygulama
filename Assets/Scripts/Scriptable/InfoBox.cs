@@ -13,6 +13,7 @@ public class InfoBox : ScriptableObject
 
     [Header("Binanýn Resimleri")]
     [SerializeField] private Material[] _binaResimler;
+    [SerializeField] private Material _binaBilgiMaterial;
     [SerializeField] private VideoClip _videoclip;
 
     public string BinaAdi { get => _binaAdi; }
@@ -22,4 +23,5 @@ public class InfoBox : ScriptableObject
     public string BinaAciklama { get => _binaAciklama; }
     public Material[] BinaResimler { get => _binaResimler; }
     public VideoClip Videoclip { get => _videoclip; }
+    public Material BinaBilgiMaterial { get => _binaBilgiMaterial; private set => _binaBilgiMaterial = value; }
 }

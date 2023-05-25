@@ -52,6 +52,8 @@ public class ButtonMethods : ScriptableObject
 
         //AR için taranmýþ binayý aktive ediyor.
         manager.SetActiveBuilding(manager.CurrentInfoBox.BinaAdi);
+
+        manager.SetBuildingInfoMaterial();
     }
 
     public void BinaDigerHaliGoster()

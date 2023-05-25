@@ -10,6 +10,8 @@ public class UIContainer : MonoBehaviour
     [SerializeField] private MeshRenderer _mainImage;
     [SerializeField] private List<MeshRenderer> _buttonImages = new();
 
+    [SerializeField] private MeshRenderer _buildingInfo;
+
     public void SetTitleText(string title)
     {
         _titleText.text = title;
@@ -52,5 +54,10 @@ public class UIContainer : MonoBehaviour
         {
             _buttonImages[i].gameObject.SetActive(false);
         }
+    }
+
+    public void SetBuildingInfo(InfoBox infoBox)
+    {
+        _buildingInfo.material = infoBox.BinaBilgiMaterial;
     }
 }
