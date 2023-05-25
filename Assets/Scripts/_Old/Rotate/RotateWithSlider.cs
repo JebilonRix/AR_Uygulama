@@ -1,21 +1,24 @@
+using Microsoft.MixedReality.Toolkit.UI;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RotateWithSlider : MonoBehaviour
 {
-    [SerializeField] private Slider _horizontalSlider;
-    private Quaternion _firstRotation;
+    [SerializeField] private PinchSlider _pinchSlider;
 
     private void Start()
     {
-        //Ýlk dönüklük kaydediliyor.
-        _firstRotation = transform.rotation;
+        if (_pinchSlider == null)
+        {
+            _pinchSlider = GameObject.FindGameObjectWithTag("Slider").GetComponent<PinchSlider>();
+        }
     }
 
     private void Update()
     {
-        // Slider deðerini, ilk dönüklükle çarparak objeyi bir ofset ile döndürüyoruz.
-        //transform.rotation = _firstRotation * Quaternion.Euler(0f, _horizontalSlider.value, _verticalSlider.value);
-        transform.rotation = _firstRotation * Quaternion.Euler(0f, _horizontalSlider.value, 0f);
+        //Objeyi slider'ýn deðerine göre döndürüyoruz.
+        transform.rotation = Quaternion.Euler(
+            transform.rotation.eulerAngles.x,
+            (_pinchSlider.SliderValue * 360f) - 180f,
+            transform.rotation.eulerAngles.z);
     }
 }
