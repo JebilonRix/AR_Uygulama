@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: EnvanterNo10
   m_EditorClassIdentifier: 
   _binaAdi: EnvanterNo10
-  _binaTarih: 
-  _binaRestorasyonTarihi: 
-  _binaYapimSistemi: 
-  _binaAciklama: 
+  _binaTarih: "Yap\u0131m Y\u0131l\u0131 Bilinmiyor-Osman"
+  _binaRestorasyonTarihi: "Onar\u0131m Ge\xE7irmi\u015Ftir (2014)."
+  _binaYapimSistemi: "Zemin-2katt\u0131r."
+  _binaAciklama: "Restorasyonu yap\u0131lm\u0131\u015F iyi durumdad\u0131r."
   _binaResimler:
-  - {fileID: 2100000, guid: 63dc0852889311b469d11489139cab75, type: 2}
-  - {fileID: 2100000, guid: 70cdcd9a912095d4abf1e52784ce346e, type: 2}
+  - {fileID: 2100000, guid: f3f432b63d6a06a4eaa13bb98de228bc, type: 2}
+  - {fileID: 2100000, guid: 273a317327780474eb37655c227d842a, type: 2}
+  - {fileID: 2100000, guid: 64c5b4ea7cea9a84eb30a236ea99373a, type: 2}
+  _binaBilgiMaterial: {fileID: 2100000, guid: c5cb037cb3d24f746b0530a817f8ac59, type: 2}
   _videoclip: {fileID: 0}

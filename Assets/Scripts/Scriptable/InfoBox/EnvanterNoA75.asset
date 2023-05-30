@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97d48ee380d4634aa473f7cb155183d, type: 3}
+  m_Name: EnvanterNoA75
+  m_EditorClassIdentifier: 
+  _binaAdi: EnvanterNoA75
+  _binaTarih: "Yap\u0131m Y\u0131l\u0131 1783-1784"
+  _binaRestorasyonTarihi: "Onar\u0131m Ge\xE7irmi\u015Ftir (2014)."
+  _binaYapimSistemi: "Kabay\xF6n\xFC ta\u015F malzeme ile \xFCretilmi\u015Ftir."
+  _binaAciklama: "Restorasyonu yap\u0131lm\u0131\u015F iyi durumdad\u0131r."
+  _binaResimler:
+  - {fileID: 2100000, guid: d6122a19f739c8647ae7c4d5e0e9f6a5, type: 2}
+  - {fileID: 2100000, guid: ed6e374468ad5a241b0e26e84c2e84aa, type: 2}
+  - {fileID: 2100000, guid: 9513e6ad131fc3f45bd2bef9151128d7, type: 2}
+  _binaBilgiMaterial: {fileID: 2100000, guid: 88fae119e07dd0c409226e67924830f7, type: 2}
+  _videoclip: {fileID: 0}

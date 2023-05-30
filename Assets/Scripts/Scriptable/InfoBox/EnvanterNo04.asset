@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EnvanterNo04
   m_EditorClassIdentifier: 
   _binaAdi: EnvanterNo04
-  _binaTarih: 1996
-  _binaRestorasyonTarihi: 1996
-  _binaYapimSistemi: "g\xFCzel"
-  _binaAciklama: "\xE7ok g\xFCzel"
+  _binaTarih: "Yap\u0131m Y\u0131l\u0131 Bilinmiyor-Osmanl\u0131"
+  _binaRestorasyonTarihi: "Onar\u0131m Ge\xE7irmi\u015Ftir."
+  _binaYapimSistemi: "Zemin-2katt\u0131r."
+  _binaAciklama: "Orjinal \xF6zelli\u011Fini kaybetmi\u015Ftir."
   _binaResimler:
-  - {fileID: 2100000, guid: 63dc0852889311b469d11489139cab75, type: 2}
-  - {fileID: 2100000, guid: 70cdcd9a912095d4abf1e52784ce346e, type: 2}
-  - {fileID: 2100000, guid: e90486d7edfd2a54dbb7bacab6a551eb, type: 2}
-  _binaBilgiMaterial: {fileID: 2100000, guid: fcac7403d5b526b4fafe6c11917387ad, type: 2}
+  - {fileID: 2100000, guid: f699b775400751b448cc9c31e472df45, type: 2}
+  - {fileID: 2100000, guid: e0132b4e15dfdf4479e24c13220c71fa, type: 2}
+  - {fileID: 2100000, guid: a692ba6850c5bcb478ecbb64bac62df7, type: 2}
+  _binaBilgiMaterial: {fileID: 2100000, guid: b3d1d2c4a63cf7447a91d5ecc29bf66a, type: 2}
   _videoclip: {fileID: 0}
