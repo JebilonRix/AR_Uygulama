@@ -60,7 +60,7 @@ public class ARManager : MonoBehaviour
         }
 
         //Ana paneli açýyor.
-        SetActiveOnlyOnePanel("Main");
+        SetActiveOnlyOnePanel("Intro");
 
         //Varsayýlan baþlýðý baþlýða yazýyor.
         SetTitleToDefault();
