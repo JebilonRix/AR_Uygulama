@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EnvanterNo05
   m_EditorClassIdentifier: 
   _binaAdi: EnvanterNo05
-  _binaTarih: "Yap\u0131m Y\u0131l\u0131 Bilinmiyor-Osmanl\u0131"
+  _binaTarih: "Yap\u0131m Y\u0131l\u0131 Bilinmiyor"
   _binaRestorasyonTarihi: "Onar\u0131m Ge\xE7irmi\u015Ftir (2014)."
-  _binaYapimSistemi: "Bodrum-Zemin-1katt\u0131r."
+  _binaYapimSistemi: "Y\u0131\u011Fma-Bodrum-Zemin-1katt\u0131r."
   _binaAciklama: "Konut olarak kullan\u0131lmaktad\u0131r."
   _binaResimler:
   - {fileID: 2100000, guid: b05d3f8b613d13c48ba2330af8a6698e, type: 2}

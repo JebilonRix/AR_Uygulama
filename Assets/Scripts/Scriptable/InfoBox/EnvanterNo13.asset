@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EnvanterNo13
   m_EditorClassIdentifier: 
   _binaAdi: EnvanterNo13
-  _binaTarih: "Yap\u0131m Y\u0131l\u0131 Bilinmiyor-Osman"
+  _binaTarih: "Yap\u0131m Y\u0131l\u0131 Bilinmiyor"
   _binaRestorasyonTarihi: "Onar\u0131m Ge\xE7irmi\u015Ftir (2015)."
-  _binaYapimSistemi: "Zemin-2katt\u0131r."
+  _binaYapimSistemi: "Y\u0131\u011Fma-Zemin-2katt\u0131r."
   _binaAciklama: "Restorasyonu yap\u0131lm\u0131\u015F pansiyon olarak kullan\u0131lmaktad\u0131r."
   _binaResimler:
   - {fileID: 2100000, guid: 7641e2d1e17474040aee220f8bcdbf25, type: 2}
